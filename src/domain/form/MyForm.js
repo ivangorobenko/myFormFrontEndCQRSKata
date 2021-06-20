@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         margin: "10px",
     },
     card: {
-        width: "50%"
+        width: "80%",
     },
     cardContent: {
         display: "flex",
@@ -38,20 +38,21 @@ export const MyForm = () => {
         setMyText(event.target.value)
     };
 
-    return (<Card className={classes.card}>
-        <CardContent className={classes.cardContent}>
+    return (
+        <Card className={classes.card}>
+            <CardContent className={classes.cardContent}>
 
-            <TextField
-                id="standard-multiline-flexible"
-                label="Mon text"
-                className={classes.textField}
-                multiline
-                value={myText}
-                onChange={onChange}
-            />
-            <Button className={classes.button} onClick={onClick} variant="contained" color="primary">
-                Envoyer
-            </Button>
-        </CardContent>
-    </Card>)
+                <TextField
+                    id="standard-multiline-flexible"
+                    label="Mon text"
+                    className={classes.textField}
+                    multiline
+                    value={myText}
+                    onChange={onChange}
+                />
+                <Button className={classes.button} onClick={onClick} variant="contained" color="primary">
+                    Envoyer
+                </Button>
+            </CardContent>
+        </Card>)
 }

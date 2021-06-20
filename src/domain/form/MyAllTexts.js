@@ -8,7 +8,8 @@ import Card from "@material-ui/core/Card";
 
 const useStyles = makeStyles({
     gridContainer: {
-        margin: "10px"
+        textAlign:"left",
+        marginTop:"30px"
     },
     gridItem: {
         maxWidth: "250px"
@@ -39,16 +40,32 @@ export const MyAllTexts = () => {
 
     return (
         <Grid className={classes.gridContainer} container>
-            {myTexts.map((text) => (
-                <Grid className={classes.gridItem} item key={text}>
-                    <Card className={classes.card}>
-                        <CardContent>
-                            <Typography color="textPrimary">
-                                {text}
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>))}
+            {
+                myTexts.map((myText) => (
+                    <Grid className={classes.gridItem} item key={myText.text}>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <Typography variant="caption"  color="textSecondary" gutterBottom>
+                                    Texte
+                                </Typography>
+                                <Typography color="textPrimary">
+                                    {myText.text}
+                                </Typography>
+                                <Typography variant="caption"  color="textSecondary" gutterBottom>
+                                    Nombre de caractères
+                                </Typography>
+                                <Typography color="textPrimary">
+                                    {myText.nbChars}
+                                </Typography>
+                                <Typography variant="caption"  color="textSecondary" gutterBottom>
+                                    Nombre de mots
+                                </Typography>
+                                <Typography color="textPrimary">
+                                    {myText.nbWords}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>))}
         </Grid>
     )
 }
