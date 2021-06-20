@@ -44,7 +44,7 @@ export const MyForm = () => {
 
                 <TextField
                     id="standard-multiline-flexible"
-                    label="Mon text"
+                    label="Mon texte"
                     className={classes.textField}
                     multiline
                     value={myText}
