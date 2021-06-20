@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         justifyContent: "center",
         width:"40%",
         padding:"50px",
-        backgroundColor: "#eae9e9"
+        backgroundColor: "#e8e7e7"
     },
 
 
